@@ -1,0 +1,21 @@
+<html lang="ru">
+<head>    
+    <title>Дата и Время</title>
+    <script>
+        function displayDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+            const date = now.toLocaleDateString('ru-RU', options);
+            const time = now.toLocaleTimeString('ru-RU');
+
+            document.getElementById('date').textContent = date;
+            document.getElementById('time').textContent = time;
+        }
+    </script>
+</head>
+<body onload="displayDateTime()">
+    <h1>Здравствуйте</h1>
+    <h2><p>Сегодня <span id="date"></span></p></h2>
+    <h3><p>Время <span id="time"></span></p></h3>
+</body>
+</html>
